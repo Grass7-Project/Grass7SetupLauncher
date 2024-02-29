@@ -19,16 +19,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance
 			if (driveType == DRIVE_CDROM || driveType == DRIVE_REMOVABLE) {
 				if (Grass7API::FileManagement::FindFile(drive, L"gr7setup.exe", fullPath))
 				{
-					/*STARTUPINFO info = { sizeof(info) };
+					STARTUPINFO info = { sizeof(info) };
 					PROCESS_INFORMATION processInfo;
-					SetCurrentDirectoryW(launchpath2);
-					if (CreateProcessW(NULL, lp2, NULL, NULL, TRUE, 0, NULL, NULL, &info, &processInfo))
+					if (CreateProcessW(NULL, fullPath, NULL, NULL, TRUE, 0, NULL, NULL, &info, &processInfo))
 					{
 					WaitForSingleObject(processInfo.hProcess, INFINITE);
 					CloseHandle(processInfo.hProcess);
 					CloseHandle(processInfo.hThread);
-					}*/
-					break;
+					}
 				}
 			}
 			drive += (lstrlenW(drive) + 1);
