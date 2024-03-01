@@ -206,7 +206,7 @@ xcopy "$(SolutionDir)Build\$(Platform)\$(Configuration)\gr7api.dll" "$(SolutionD
     <ResourceCompile Include="Grass7 Setup Launcher.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Grass7 Setup Launcher.ico" />
+    <Image Include="res\Icons\Setup.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
